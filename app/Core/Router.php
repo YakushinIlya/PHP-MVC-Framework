@@ -10,7 +10,7 @@ final class Router
     private array $routes = [];
 
     private array $paramTypes = [];
-
+    
     public function __construct(string $routesFile)
     {
         $this->routes = require $routesFile;
