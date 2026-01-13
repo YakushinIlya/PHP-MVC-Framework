@@ -12,5 +12,6 @@
     <br>
     Статус: <?= htmlspecialchars($status) ?>
 </p>
+<?php require_once dirname(__DIR__) . '/views/layouts/menu.php'; ?>
 </body>
 </html>

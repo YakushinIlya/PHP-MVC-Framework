@@ -9,6 +9,17 @@ use App\Core\Request;
 
 final class UserController extends Controller
 {
+    public function index(Request $request): Response
+    {
+        $users = DB::query("select * from users limit :limit")
+            ->execute(['limit'=>10])
+            ->array();
+
+        return $users ? $this->view('users', [
+            'users' => $users,
+        ]) : $this->view('message', ['message'=>'No user data.']);
+    }
+
     public function show(Request $request, int $id, string $status): Response
     {
         $users = DB::query("select * from users where id = :id and status = :status")
