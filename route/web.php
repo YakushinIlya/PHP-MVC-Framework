@@ -7,7 +7,6 @@ use App\Http\AboutController;
 
 return [
     '/' => ['GET', HomeController::class, 'index'],
-    '/users/{id}' => ['GET', UserController::class, 'show'],
     '/about' => ['GET', AboutController::class, 'index'],
-
+    '/users/{id:int}/{status:string}' => ['GET', UserController::class, 'show'],
 ];

@@ -9,6 +9,8 @@
     Name: <?= htmlspecialchars($name) ?>
     <br>
     E-mail: <?= htmlspecialchars($email) ?>
+    <br>
+    Статус: <?= htmlspecialchars($status) ?>
 </p>
 </body>
 </html>
